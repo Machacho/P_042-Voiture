@@ -1,0 +1,15 @@
+.backgroundHome{
+    border: 15px solid black;
+    background-size: 100% 100%;
+    background-position-y: 0px;
+    background-position-x: 0px;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    
+}
+.backgroundHome h1{
+    text-shadow: 3px 3px 3px black;
+}
+p{
+    font-size: 20px;
+}
