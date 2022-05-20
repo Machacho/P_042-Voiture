@@ -103,5 +103,37 @@
         return $this -> formatData($getQueryAllCar);    
     }
 
+    public function insertUser($useLogin, $usePassword){
+
+        $queryRequest = "INSERT INTO `t_user` (`useLogin`, `usePassword`) VALUES (:login, :password)";
+
+        $arrayBinds = array(
+            array("name" => "login", "value" => $useLogin, "type" => PDO::PARAM_STR),
+            array("name" => "password", "value" => $usePassword, "type" => PDO::PARAM_STR)
+        );
+
+        $this->queryPrepareExecute($queryRequest, $arrayBinds);
     }
+
+    public function selectUserWithLogin($login){
+
+        // Get the informations of the user
+        $queryRequest = "SELECT idUser, useLogin, usePassword FROM t_user WHERE useLogin=:login";
+
+        // Set an array with the binds values
+        $arrayBinds = array(
+
+            array("name" => "login", "value" => $login, "type" => PDO::PARAM_STR)
+        );
+
+        // Execute the request
+        $result = $this->queryPrepareExecute($queryRequest, $arrayBinds);
+
+        $usersReturned = $this->formatData($result);
+
+        //return the array
+        return $usersReturned;
+
+    }
+}
 ?>

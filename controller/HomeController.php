@@ -64,6 +64,17 @@ class HomeController extends Controller {
         return $content;
     }
 
+    private function connexionAction() {
+        
+        $view = file_get_contents('view/page/connexion/login.php');
+
+        ob_start();
+        eval('?>' . $view);
+        $content = ob_get_clean();
+
+        return $content;
+    }
+
         /**
      * Check Form action
      *

@@ -21,6 +21,7 @@ include_once 'controller/HomeController.php';
 include_once 'controller/ListCarController.php';
 include_once 'controller/CarController.php';
 include_once 'controller/SingleCarController.php';
+include_once 'controller/LogController.php';
 
 
 class MainController {
@@ -61,8 +62,8 @@ class MainController {
             case 'SingleCar':
                 $link = new SingleCarController();
                 break;    
-            default:
-                $link = new HomeController();
+            case 'connexion':
+                $link = new LogController();
                 break;
         }
 
