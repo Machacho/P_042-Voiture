@@ -24,7 +24,7 @@ Description : Page d'accueil qui montre les 5 dernières voiture ajouter
 					?>
 					<div class="col mb-5">
 						<div class="card h-100">
-						<img class="card-img rounded-0 img-fluid" src="../../../resources/image/<?=$cars[$key]['voiImg'];?>" alt="Image of the cars">
+						<img class="card-img rounded-0 img-fluid" src="resources/image/<?=$cars[$key]['voiImg'];?>" alt="Image of the cars">
 							<!-- Product details-->
 							<div class="card-body p-4">
 								<div class="text-center">

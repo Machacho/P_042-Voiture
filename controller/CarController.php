@@ -8,7 +8,7 @@
 
 include_once 'model/Database.php';
 
-class PhoneController extends Controller {
+class CarController extends Controller {
 
     /**
      * Permet de choisir l'action à effectuer

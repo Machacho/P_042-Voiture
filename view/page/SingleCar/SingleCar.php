@@ -13,7 +13,7 @@ Description : Page d'accueil qui montre les 5 dernières voiture ajouter
     $cars = $data -> getAllCar();
     
     ?>
-    <img class="card-img rounded-0 img-fluid" src="../../../../www/resources/image/<?=$cars[$id-1]['voiImg'];?>" alt="Image of the cars">
+    <img class="card-img rounded-0 img-fluid" src="resources/image/<?=$cars[$id-1]['voiImg'];?>" alt="Image of the cars">
     <div class="text-center">
         <h5>Marque : <?=$cars[$id-1]['voiMarque'];?></h5>
         <h5>Modéle : <?=$cars[$id-1]['voiModel'];?></h5>
