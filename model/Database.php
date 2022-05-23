@@ -135,5 +135,23 @@
         return $usersReturned;
 
     }
+
+    public function insertCar($model, $millesime, $departArreter, $prix, $puissance, $marque){
+        
+        //avoir la requête pour insérer un professeur
+            $queryInsertTeacher = "INSERT INTO `t_voiture`(`idVoiture`, `voiModel, `voiMillesime`, `voiDepartArrete`, `voiPrix`, `voiPrix` `fkMarque`) VALUES (NULL, :model, :millesime, :departArrete, :prix, :puissance, :marque)";
+
+            $bindInsertTeacher = array(
+                0=>array("name" => "model", "value" => $model, "type" => PDO::PARAM_STR),
+                1=>array("name" => "millesime", "value" => $millesime, "type" => PDO::PARAM_STR),
+                2=>array("name" => "departArrete", "value" => $departArreter, "type" => PDO::PARAM_STR),
+                3=>array("name" => "prix", "value" => $prix, "type" => PDO::PARAM_STR),
+                4=>array("name" => "puisance", "value" => $puissance, "type" => PDO::PARAM_STR),
+                5=>array("name" => "marque", "value" => $marque, "type" => PDO::PARAM_INT)
+            );
+            
+            // appeler la méthode pour executer la requête
+            $this->queryPrepareExecute($queryInsertTeacher, $bindInsertTeacher);
+    }
 }
 ?>

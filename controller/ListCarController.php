@@ -48,7 +48,6 @@ class ListCarController extends Controller {
             eval('?>' . $view);
             $content = ob_get_clean();
     
-            return $content;
-        
+            return $content;       
     }
 }

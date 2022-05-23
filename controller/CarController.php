@@ -32,7 +32,7 @@ class CarController extends Controller {
 
         // Instancie le modèle et va chercher les informations
         $db = new Database();
-        $phones = $db->getAllCar();
+        $cars = $db->getAllCar();
 
         // Charge le fichier pour la vue
         $view = file_get_contents('view/page/listCar/index.php');

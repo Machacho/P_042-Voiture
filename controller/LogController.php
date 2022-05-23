@@ -98,7 +98,7 @@ class LogController extends Controller {
                     $database->insertUser($login, $hashPass);
 
                     //Connect the user
-                    $usersFound = $database->selectUserWithEmail($login);
+                    $usersFound = $database->selectUserWithLogin($login);
 
                     if($usersFound){
                         foreach ($usersFound as $key => $value) {

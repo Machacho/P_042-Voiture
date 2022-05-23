@@ -22,6 +22,7 @@ include_once 'controller/ListCarController.php';
 include_once 'controller/CarController.php';
 include_once 'controller/SingleCarController.php';
 include_once 'controller/LogController.php';
+include_once 'controller/AccountController.php';
 
 
 class MainController {
@@ -65,8 +66,11 @@ class MainController {
             case 'connexion':
                 $link = new LogController();
                 break;
-        }
-
+            case 'account':
+                $link = new AccountController();
+                break;
+                
+            }
         return $link;
     }
 

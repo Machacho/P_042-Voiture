@@ -75,7 +75,18 @@ class HomeController extends Controller {
         return $content;
     }
 
-        /**
+    private function accountAction() {
+        
+        $view = file_get_contents('view/page/compte/compte.php');
+
+        ob_start();
+        eval('?>' . $view);
+        $content = ob_get_clean();
+
+        return $content;
+    }
+
+    /**
      * Check Form action
      *
      * @return string
@@ -94,4 +105,5 @@ class HomeController extends Controller {
 
         return $content;
     }
+
 }
